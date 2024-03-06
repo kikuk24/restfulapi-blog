@@ -17,7 +17,7 @@ const Users = db.define("users", {
     allowNull: false,
     validate: {
       notEmpty: true,
-      len: [3, 50]
+      len: [3, 100]
     }
   },
   email: {
@@ -34,6 +34,19 @@ const Users = db.define("users", {
     validate: {
       notEmpty: true
     }
+  },
+  role: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true
+    }
+  },
+  image: {
+    type: DataTypes.STRING
+  },
+  url: {
+    type: DataTypes.STRING
   }
 
 }, {

@@ -12,16 +12,31 @@ const Portofolio = db.define('portfolios', {
       notEmpty: true
     }
   },
-  description: {
+  link: {
     type: DataTypes.STRING,
   },
+  category: {
+    type: DataTypes.STRING
+  },
+  userId: {
+    type: DataTypes.INTEGER
+  },
+  description: {
+    type: DataTypes.TEXT,
+  },
   image: {
+    type: DataTypes.STRING
+  },
+  url: {
+    type: DataTypes.STRING
+  },
+  slug: {
     type: DataTypes.STRING
   }
 }, {
   freezeTableName: true
 })
 
-Users.hasMany(Portofolio)
-Portofolio.belongsTo(Users)
+Users.hasMany(Portofolio);
+Portofolio.belongsTo(Users, { foreignKey: 'userId' });
 export default Portofolio

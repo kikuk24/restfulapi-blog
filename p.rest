@@ -1,0 +1,21 @@
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email":"raja@gmail.com",
+  "password":"rajaraja"
+}
+
+###
+GET  http://localhost:5000/adminblogs
+###
+DELETE http://localhost:5000/logout
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "email":"afandi@kikukcode.com",
+  "password":"admin123"
+}
